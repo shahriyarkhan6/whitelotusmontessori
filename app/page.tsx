@@ -164,7 +164,7 @@ export default function Home() {
       {/* ── Hero — Split Layout ── */}
       <section className="bg-soft-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center pt-8 pb-20 lg:pt-12 lg:pb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center pt-2 pb-20 lg:pt-4 lg:pb-32">
 
             {/* Left — content */}
             <div className="max-w-xl">
