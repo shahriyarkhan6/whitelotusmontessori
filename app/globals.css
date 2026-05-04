@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Sage Green */
+  --color-sage-50: #f4f7f1;
+  --color-sage-100: #e4ecdd;
+  --color-sage-200: #c8d9bb;
+  --color-sage-300: #a3be8c;
+  --color-sage-400: #84a86e;
+  --color-sage-500: #6b8f54;
+  --color-sage-600: #547142;
+  --color-sage-700: #425936;
+  --color-sage-800: #36472c;
+  --color-sage-900: #2c3a24;
+
+  /* Warm Cream */
+  --color-cream-50: #fdfcf8;
+  --color-cream-100: #faf7f0;
+  --color-cream-200: #f5ede0;
+  --color-cream-300: #ede0cc;
+  --color-cream-400: #e0cfb4;
+  --color-cream-500: #d0b990;
+
+  /* Terracotta */
+  --color-terra-50: #fdf4f0;
+  --color-terra-100: #fae4d8;
+  --color-terra-200: #f4c4aa;
+  --color-terra-300: #e89d78;
+  --color-terra-400: #d97a50;
+  --color-terra-500: #c4603a;
+  --color-terra-600: #a34d2d;
+  --color-terra-700: #843d25;
+  --color-terra-800: #693220;
+  --color-terra-900: #542a1c;
+
+  /* Warm Grays */
+  --color-warm-gray-50: #faf9f7;
+  --color-warm-gray-100: #f3f1ed;
+  --color-warm-gray-200: #e5e1d9;
+  --color-warm-gray-300: #d1ccc1;
+  --color-warm-gray-400: #b5afa3;
+  --color-warm-gray-500: #938d7f;
+  --color-warm-gray-600: #726c60;
+  --color-warm-gray-700: #5a554b;
+  --color-warm-gray-800: #47433b;
+  --color-warm-gray-900: #3a362f;
+
+  /* Typography */
+  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-50);
+  color: var(--color-warm-gray-900);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+}
