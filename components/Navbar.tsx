@@ -16,11 +16,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-soft-white border-b border-powder-pink/50 sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+    <header className="bg-soft-white border-b border-powder-pink/30 sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 py-5 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <LogoSVG />
+          <LogoSVG className="gap-4 [&>svg]:w-12 [&>svg]:h-10 [&>div>span:first-child]:!text-2xl [&>div>span:last-child]:!text-sm [&>div>span:last-child]:tracking-widest" />
         </Link>
 
         {/* Center — desktop nav links */}
@@ -29,7 +29,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-sans text-sage-green text-[0.7rem] uppercase tracking-widest hover:text-olive-green transition-colors"
+                className="font-sans text-sage-green text-sm uppercase tracking-widest hover:text-olive-green transition-colors"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/admissions"
-            className="hidden lg:inline-flex items-center bg-olive-green hover:bg-sage-green text-white font-sans text-[0.7rem] uppercase tracking-widest px-5 py-2.5 rounded-full transition-colors flex-shrink-0"
+            className="hidden lg:inline-flex items-center bg-olive-green hover:bg-sage-green text-white font-sans text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-colors flex-shrink-0"
           >
             BOOK A TOUR
           </Link>
