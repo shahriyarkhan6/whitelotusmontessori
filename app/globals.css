@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  /* ── White Lotus Brand Palette ── */
+  --color-soft-white: #F7F6F2;
+  --color-olive-green: #7A8F7A;
+  --color-sage-green: #4F6A5A;
+  --color-powder-pink: #EAD6D1;
+  --color-hint-yellow: #F2E8C9;
+
+  /* ── Legacy scale (used by other pages) ── */
   /* Sage Green */
   --color-sage-50: #f4f7f1;
   --color-sage-100: #e4ecdd;
@@ -47,7 +55,7 @@
 
   /* Typography */
   --font-heading: var(--font-playfair);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-lato);
 }
 
 html {
@@ -55,9 +63,9 @@ html {
 }
 
 body {
-  background-color: var(--color-cream-50);
-  color: var(--color-warm-gray-900);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: var(--color-soft-white);
+  color: var(--color-sage-green);
+  font-family: var(--font-lato), system-ui, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
