@@ -16,11 +16,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-soft-white border-b border-powder-pink/30 sticky top-0 z-50">
+    <header className="bg-olive-green border-b border-white/10 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 py-5 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <LogoSVG className="gap-4 [&>svg]:w-12 [&>svg]:h-10 [&>div>span:first-child]:!text-2xl [&>div>span:last-child]:!text-sm [&>div>span:last-child]:tracking-widest" />
+          <LogoSVG className="gap-4 [&>svg]:w-12 [&>svg]:h-10 [&>svg]:text-white [&>div>span:first-child]:!text-2xl [&>div>span:first-child]:!text-white [&>div>span:last-child]:!text-sm [&>div>span:last-child]:tracking-widest [&>div>span:last-child]:!text-white/70" />
         </Link>
 
         {/* Center — desktop nav links */}
@@ -29,7 +29,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-sans text-sage-green text-sm uppercase tracking-widest hover:text-olive-green transition-colors"
+                className="font-sans text-white/90 text-sm uppercase tracking-widest hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/admissions"
-            className="hidden lg:inline-flex items-center bg-olive-green hover:bg-sage-green text-white font-sans text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-colors flex-shrink-0"
+            className="hidden lg:inline-flex items-center bg-white hover:bg-hint-yellow text-sage-green font-sans text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-colors flex-shrink-0"
           >
             BOOK A TOUR
           </Link>
@@ -54,17 +54,17 @@ export default function Navbar() {
             aria-expanded={menuOpen}
           >
             <span
-              className={`block h-px w-5 bg-sage-green transition-all duration-200 origin-center ${
+              className={`block h-px w-5 bg-white transition-all duration-200 origin-center ${
                 menuOpen ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
             <span
-              className={`block h-px w-5 bg-sage-green transition-opacity duration-200 ${
+              className={`block h-px w-5 bg-white transition-opacity duration-200 ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-px w-5 bg-sage-green transition-all duration-200 origin-center ${
+              className={`block h-px w-5 bg-white transition-all duration-200 origin-center ${
                 menuOpen ? "-translate-y-[7px] -rotate-45" : ""
               }`}
             />
@@ -74,13 +74,13 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="lg:hidden bg-soft-white border-t border-powder-pink/50 px-6 py-6">
+        <div className="lg:hidden bg-sage-green border-t border-white/10 px-6 py-6">
           <ul className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-sans text-sage-green text-sm uppercase tracking-widest hover:text-olive-green transition-colors"
+                  className="font-sans text-white/90 text-sm uppercase tracking-widest hover:text-white transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -90,7 +90,7 @@ export default function Navbar() {
             <li className="pt-2">
               <Link
                 href="/admissions"
-                className="inline-flex items-center bg-olive-green hover:bg-sage-green text-white font-sans text-[0.7rem] uppercase tracking-widest px-6 py-3 rounded-full transition-colors"
+                className="inline-flex items-center bg-white hover:bg-hint-yellow text-sage-green font-sans text-[0.7rem] uppercase tracking-widest px-6 py-3 rounded-full transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 BOOK A TOUR
