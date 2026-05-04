@@ -16,7 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#175107] border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-[#0d3204] border-b border-white/10 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 py-5 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#175107] border-t border-white/10 px-6 py-6">
+        <div className="lg:hidden bg-[#0d3204] border-t border-white/10 px-6 py-6">
           <ul className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <li key={link.href}>
