@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import LogoSVG from "@/components/LogoSVG";
 
 const navLinks = [
   { label: "ABOUT", href: "/about" },
@@ -17,10 +17,10 @@ export default function Navbar() {
 
   return (
     <header className="bg-[#0d3204] border-b border-white/10 sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14 flex items-center justify-between gap-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 lg:py-1 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <LogoSVG className="gap-4 [&>svg]:w-12 [&>svg]:h-10 [&>svg]:text-white [&>div>span:first-child]:!text-2xl [&>div>span:first-child]:!text-white [&>div>span:last-child]:!text-sm [&>div>span:last-child]:tracking-widest [&>div>span:last-child]:!text-white/70" />
+          <Image src="/wlm_logo.png" alt="White Lotus Montessori School" width={896} height={336} className="h-44 w-auto" priority />
         </Link>
 
         {/* Center — desktop nav links */}
