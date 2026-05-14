@@ -171,7 +171,7 @@ export default function Home() {
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-left-top"
+            className="object-cover object-left-top blur-sm scale-105"
           />
         </div>
         {/* Fade overlay — left-to-right on desktop only */}
