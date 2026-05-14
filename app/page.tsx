@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Leaf, Home as HouseIcon, User } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
@@ -161,59 +162,35 @@ const whyPoints = [
 export default function Home() {
   return (
     <>
-      {/* ── Hero — Split Layout ── */}
-      <section className="bg-soft-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center pt-2 pb-20 lg:pt-4 lg:pb-32">
+      {/* ── Hero — Full Screen ── */}
+      <section className="relative min-h-[70vh] overflow-hidden">
+        {/* Image on the right half */}
+        <div className="absolute right-0 top-0 h-full w-[70%]">
+          <Image
+            src="/wlm_boy.jpg"
+            alt="White Lotus Montessori"
+            fill
+            priority
+            className="object-cover object-top"
+          />
+        </div>
+        {/* Left-to-white fade overlay */}
+        <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to right, #f5f2ec 35%, transparent 50%)" }} />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-20">
+          <div className="max-w-2xl">
+            <h1 className="font-heading text-sage-green font-bold leading-[1.15] mb-6">
+              <span className="block text-[1.35rem] sm:text-2xl font-semibold mb-1">Welcome to</span>
+              <span className="block text-[2.7rem] sm:text-[3.6rem] xl:text-[4.2rem]">White Lotus Montessori</span>
+            </h1>
 
-            {/* Left — content */}
-            <div className="max-w-xl">
-              <h1 className="font-heading text-sage-green text-4xl sm:text-5xl xl:text-[3.5rem] font-bold leading-[1.15] mb-6">
-                Nurturing Independence. Inspiring Potential.
-              </h1>
-
-              {/* Lotus divider in hint-yellow */}
-              <div className="mb-6">
-                <LotusDivider />
-              </div>
-
-              <p className="font-sans text-olive-green text-lg leading-relaxed mb-10">
-                A peaceful Montessori environment where children grow with confidence,
-                curiosity, and a love for learning.
-              </p>
-
-              <Link
-                href="/admissions"
-                className="inline-flex items-center bg-powder-pink hover:bg-[#dfc8c3] text-sage-green font-sans text-sm uppercase tracking-widest px-8 py-3.5 rounded-sm transition-colors"
-              >
-                BOOK A TOUR
-              </Link>
+            {/* Lotus divider in hint-yellow */}
+            <div className="mb-6">
+              <LotusDivider />
             </div>
 
-            {/* Right — image placeholder with stripe decoration */}
-            <div className="relative py-8 pl-8 hidden sm:block">
-              {/* Diagonal stripe decoration — extends behind image */}
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  backgroundImage: `repeating-linear-gradient(
-                    30deg,
-                    #EAD6D1,
-                    #EAD6D1 2px,
-                    transparent 2px,
-                    transparent 26px,
-                    #F2E8C9 26px,
-                    #F2E8C9 28px,
-                    transparent 28px,
-                    transparent 52px
-                  )`,
-                  opacity: 0.15,
-                }}
-              />
-              {/* Image placeholder */}
-              <div className="relative w-full aspect-[4/5] rounded-lg bg-stone-100" />
-            </div>
-
+            <p className="font-sans text-[#2d5a27] text-lg leading-relaxed max-w-[480px]">
+              We empower children through Montessori learning to become confident thinkers, lifelong learners, and compassionate contributors to the world.
+            </p>
           </div>
         </div>
       </section>
