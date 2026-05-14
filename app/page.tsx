@@ -164,14 +164,14 @@ export default function Home() {
     <>
       {/* ── Hero — Full Screen ── */}
       <section className="relative min-h-[70vh] overflow-hidden">
-        {/* Image — full width on mobile, right 70% on desktop */}
-        <div className="absolute right-0 top-0 h-full w-full lg:w-[70%]">
+        {/* Image — right 75% on mobile, right 70% on desktop */}
+        <div className="absolute right-0 top-0 h-full w-[75%] lg:w-[70%]">
           <Image
             src="/wlm_boy.jpg"
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-[right_top]"
+            className="object-cover object-left-top"
           />
         </div>
         {/* Fade overlay — left-to-right on desktop only */}
@@ -183,7 +183,7 @@ export default function Home() {
         />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-20">
           <div className="max-w-2xl">
-            <h1 className="font-heading text-sage-green font-bold leading-[1.15] mb-6 text-center lg:text-left">
+            <h1 className="font-heading text-white lg:text-sage-green font-bold leading-[1.15] mb-6 text-center lg:text-left">
               <span className="block text-[1.35rem] sm:text-2xl font-semibold mb-1">Welcome to</span>
               <span className="block text-[2.7rem] sm:text-[3.6rem] xl:text-[4.2rem]">White Lotus Montessori</span>
             </h1>
@@ -193,7 +193,7 @@ export default function Home() {
               <LotusDivider />
             </div>
 
-            <p className="font-sans text-[#2d5a27] text-lg leading-relaxed max-w-[480px]">
+            <p className="font-sans text-white lg:text-[#2d5a27] text-lg leading-relaxed max-w-[480px]">
               We empower children through Montessori learning to become confident thinkers, lifelong learners, and compassionate contributors to the world.
             </p>
           </div>
