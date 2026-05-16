@@ -40,10 +40,10 @@ export default function Navbar() {
         {/* Right — CTA + mobile toggle */}
         <div className="flex items-center gap-4">
           <Link
-            href="/admissions"
+            href="/waitlist"
             className="hidden lg:inline-flex items-center bg-white hover:bg-hint-yellow text-sage-green font-sans text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-colors flex-shrink-0"
           >
-            BOOK A TOUR
+            JOIN WAITING LIST
           </Link>
 
           {/* Hamburger */}
@@ -89,11 +89,11 @@ export default function Navbar() {
             ))}
             <li className="pt-2">
               <Link
-                href="/admissions"
+                href="/waitlist"
                 className="inline-flex items-center bg-white hover:bg-hint-yellow text-sage-green font-sans text-[0.7rem] uppercase tracking-widest px-6 py-3 rounded-full transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                BOOK A TOUR
+                JOIN WAITING LIST
               </Link>
             </li>
           </ul>

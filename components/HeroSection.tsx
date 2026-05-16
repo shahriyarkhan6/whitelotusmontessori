@@ -10,7 +10,7 @@ interface HeroSectionProps {
 export default function HeroSection({
   headline = "Nurturing Curious Minds",
   subheadline = "A warm, prepared environment where children aged 18 months to 6 years discover the joy of learning at their own pace — guided by certified Montessori educators in the heart of Whitby, Ontario.",
-  ctaLabel = "Book a Tour",
+  ctaLabel = "Join Waiting List",
   ctaHref = "/admissions",
 }: HeroSectionProps) {
   return (
