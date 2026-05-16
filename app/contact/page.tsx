@@ -38,8 +38,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Address</h3>
                   <address className="not-italic text-warm-gray-600 text-sm leading-relaxed">
-                    White Lotus Montessori<br />
-                    Whitby, Ontario<br />
+                    300 Dundas St W<br />
+                    Whitby, ON L1N 2M5<br />
                     Canada
                   </address>
                 </div>
@@ -52,10 +52,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Phone</h3>
                   <a
-                    href="tel:+19055550123"
+                    href="tel:+16472611323"
                     className="text-warm-gray-600 hover:text-sage-700 text-sm transition-colors"
                   >
-                    (905) 555-0123
+                    647-261-1323
                   </a>
                 </div>
               </div>
@@ -67,10 +67,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Email</h3>
                   <a
-                    href="mailto:hello@whitelotusmontessori.ca"
+                    href="mailto:info@whitelotusmontessori.com"
                     className="text-warm-gray-600 hover:text-sage-700 text-sm transition-colors"
                   >
-                    hello@whitelotusmontessori.ca
+                    info@whitelotusmontessori.com
                   </a>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                   type="tel"
                   autoComplete="tel"
                   className="w-full rounded-lg border border-warm-gray-300 bg-white px-4 py-2.5 text-sm text-warm-gray-900 placeholder:text-warm-gray-400 focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent"
-                  placeholder="(905) 555-0000"
+                  placeholder="647-261-1323"
                 />
               </div>
 

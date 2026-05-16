@@ -11,27 +11,21 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Book a Tour",
+    title: "Join Our Waitlist",
     description:
-      "Start with a visit. You and your child are welcome to come and experience our environment firsthand. Our director will walk you through the classrooms, answer your questions, and discuss how the program might fit your family.",
+      "Fill out our inquiry form to share your child's details and preferred start date. We'll add your family to our waitlist right away.",
   },
   {
     number: "02",
-    title: "Submit an Application",
+    title: "Connect With Our Team",
     description:
-      "Complete our enrolment application form and submit it along with your child's immunization records and birth certificate. Applications are reviewed on a rolling basis, with priority given to siblings of current students.",
+      "Our admissions team will reach out to discuss availability, answer your questions, and walk you through the next steps.",
   },
   {
     number: "03",
-    title: "Child Observation Visit",
+    title: "Registration & Enrollment",
     description:
-      "Prospective students are invited for a short observation visit so our educators can learn about your child's interests and temperament. This helps us plan a smooth, welcoming first week.",
-  },
-  {
-    number: "04",
-    title: "Confirm Enrollment",
-    description:
-      "Upon acceptance, you will receive an offer letter and registration package. A registration deposit secures your child's spot. We will work with you to arrange a gradual start schedule tailored to your child.",
+      "Families offered a spot will receive registration details and enrollment information to confirm their child's place.",
   },
 ];
 
@@ -80,30 +74,29 @@ export default function AdmissionsPage() {
             The Enrolment Process
           </h2>
           <p className="text-warm-gray-600 text-lg max-w-xl mx-auto">
-            Four simple steps to joining the White Lotus community.
+            Three simple steps to joining the White Lotus community.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {steps.map((step) => (
-            <div key={step.number} className="flex gap-6">
-              <div className="font-heading text-terra-300 text-5xl font-bold leading-none flex-shrink-0 w-12">
+            <div key={step.number} className="bg-white border border-warm-gray-100 rounded-2xl p-8 flex flex-col">
+              <span className="font-heading text-terra-300 text-4xl font-bold leading-none mb-4">
                 {step.number}
-              </div>
-              <div>
-                <h3 className="font-heading text-sage-800 text-xl font-semibold mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-warm-gray-600 text-sm leading-relaxed">{step.description}</p>
-              </div>
+              </span>
+              <div className="w-8 h-px bg-terra-200 mb-5" />
+              <h3 className="font-heading text-sage-800 text-2xl font-semibold mb-3">
+                {step.title}
+              </h3>
+              <p className="text-warm-gray-600 text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
         <div className="mt-12 text-center">
           <Link
-            href="/contact"
+            href="/waitlist"
             className="inline-block bg-terra-500 hover:bg-terra-600 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-base"
           >
-            Book Your Tour
+            Join the Waiting List
           </Link>
         </div>
       </SectionWrapper>
@@ -142,7 +135,7 @@ export default function AdmissionsPage() {
           <div className="space-y-8">
             {faqs.map((faq) => (
               <div key={faq.q} className="border-b border-warm-gray-200 pb-8 last:border-0 last:pb-0">
-                <h3 className="font-heading text-sage-800 text-lg font-semibold mb-3">{faq.q}</h3>
+                <h3 className="font-heading text-sage-800 text-2xl font-semibold mb-3">{faq.q}</h3>
                 <p className="text-warm-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}

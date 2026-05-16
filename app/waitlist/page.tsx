@@ -201,7 +201,7 @@ export default function WaitlistPage() {
                       type="tel"
                       autoComplete="tel"
                       required
-                      placeholder="(905) 555-0000"
+                      placeholder="647-261-1323"
                       value={form.phone}
                       onChange={set("phone")}
                       className={inputClass}

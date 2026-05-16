@@ -48,18 +48,18 @@ export default function Footer() {
               Contact Us
             </h4>
             <address className="not-italic space-y-2 text-sage-300 text-sm">
-              <p>Whitby, Ontario, Canada</p>
+              <p>300 Dundas St W, Whitby, ON L1N 2M5</p>
               <p>
-                <a href="tel:+19055550123" className="hover:text-cream-100 transition-colors">
-                  (905) 555-0123
+                <a href="tel:+16472611323" className="hover:text-cream-100 transition-colors">
+                  647-261-1323
                 </a>
               </p>
               <p>
                 <a
-                  href="mailto:hello@whitelotusmontessori.ca"
+                  href="mailto:info@whitelotusmontessori.com"
                   className="hover:text-cream-100 transition-colors"
                 >
-                  hello@whitelotusmontessori.ca
+                  info@whitelotusmontessori.com
                 </a>
               </p>
             </address>
