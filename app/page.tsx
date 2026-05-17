@@ -112,29 +112,6 @@ const features = [
   },
 ];
 
-const programs = [
-  {
-    title: "Toddler Program",
-    age: "18 months – 2.5 years",
-    description:
-      "A gentle introduction to the Montessori environment. Toddlers build independence, language, and fine motor skills through hands-on materials and caring one-on-one guidance.",
-    href: "/programs#toddler",
-  },
-  {
-    title: "Casa Program",
-    age: "2.5 – 6 years",
-    description:
-      "Our flagship multi-age classroom follows the Montessori philosophy of self-directed learning. Children develop reading, math, practical life, and social-emotional skills at their own pace.",
-    href: "/programs#casa",
-  },
-  {
-    title: "Extended Day",
-    age: "2.5 – 6 years",
-    description:
-      "Flexible extended-care hours for busy families — before and after the core program. Children enjoy enrichment activities, outdoor play, and rest in a nurturing, consistent environment.",
-    href: "/programs#extended",
-  },
-];
 
 const whyPoints = [
   {
@@ -226,43 +203,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── Programs Overview ── */}
-      <div className="bg-hint-yellow/20">
-        <SectionWrapper id="programs">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-sage-green text-3xl sm:text-4xl font-bold mb-4">
-              Programs for Every Stage
-            </h2>
-            <p className="font-sans text-olive-green text-lg max-w-2xl mx-auto">
-              From first steps to kindergarten, our programs meet children exactly where they are and grow with them every day.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {programs.map((program) => (
-              <div
-                key={program.title}
-                className="bg-soft-white rounded-2xl p-8 border border-powder-pink/40 hover:border-powder-pink transition-colors flex flex-col"
-              >
-                <h3 className="font-heading text-sage-green text-xl font-semibold mb-1">
-                  {program.title}
-                </h3>
-                <p className="font-sans text-olive-green text-xs uppercase tracking-wider font-bold mb-4">
-                  {program.age}
-                </p>
-                <p className="font-sans text-olive-green/80 text-sm leading-relaxed flex-1">
-                  {program.description}
-                </p>
-                <Link
-                  href={program.href}
-                  className="inline-block mt-6 font-sans text-sage-green hover:text-olive-green text-sm font-bold uppercase tracking-wider transition-colors"
-                >
-                  Learn more →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </SectionWrapper>
-      </div>
 
       {/* ── Why Montessori ── */}
       <SectionWrapper id="why-montessori">

@@ -29,28 +29,6 @@ const steps = [
   },
 ];
 
-const faqs = [
-  {
-    q: "What are your hours of operation?",
-    a: "The Casa program runs Monday to Friday, 8:30 AM to 3:00 PM. Extended care is available from 7:30 AM and until 5:30 PM. The Toddler program runs 8:30 AM to 12:00 PM.",
-  },
-  {
-    q: "Is a subsidy available?",
-    a: "Yes. White Lotus Montessori is registered with the Region of Durham's Child Care Fee Subsidy program. Eligible families can apply through the Region of Durham directly.",
-  },
-  {
-    q: "What is the child-to-educator ratio?",
-    a: "In the Toddler room, we maintain a 1:4 ratio. In the Casa program, our ratio is 1:8, well below the provincial requirement, ensuring each child receives individualized attention.",
-  },
-  {
-    q: "Do you follow the Ontario curriculum?",
-    a: "Yes. Our Casa program is aligned with the Ontario Ministry of Education Kindergarten Program while remaining faithful to Montessori principles. Children who complete our program are exceptionally well prepared for Grade 1.",
-  },
-  {
-    q: "What should my child bring each day?",
-    a: "Children should arrive in comfortable, easy-to-manage clothing suitable for messy, active play. Please provide a labelled lunch bag (with a nut-free lunch for Extended Day families), a change of clothes, and indoor shoes.",
-  },
-];
 
 export default function AdmissionsPage() {
   return (
@@ -62,7 +40,7 @@ export default function AdmissionsPage() {
             Admissions
           </h1>
           <p className="text-sage-200 text-xl max-w-2xl">
-            We are so glad you&apos;re considering White Lotus for your child. Enrolment is straightforward — here&apos;s how to get started.
+            We look forward to supporting your child&apos;s growth by building on their strengths, interests, and learning style through admissions.
           </p>
         </div>
       </div>
@@ -101,47 +79,6 @@ export default function AdmissionsPage() {
         </div>
       </SectionWrapper>
 
-      {/* Tuition note */}
-      <div className="bg-cream-100">
-        <SectionWrapper>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-sage-900 text-3xl font-bold mb-6 text-center">
-              Tuition & Fees
-            </h2>
-            <div className="bg-white rounded-2xl p-8 border border-warm-gray-100 space-y-4 text-warm-gray-600 text-sm leading-relaxed">
-              <p>
-                Our fees reflect the quality of our program, the qualifications of our educators, and our commitment to maintaining excellent staff-to-child ratios. We believe in transparent, fair pricing.
-              </p>
-              <p>
-                Tuition is billed monthly and is due on the first of each month. A registration deposit (equal to one month&apos;s tuition) is required upon acceptance and is applied to the final month of enrolment.
-              </p>
-              <p>
-                <strong className="text-warm-gray-800">Fee schedules are provided directly during the admissions process.</strong> Please contact us or book a tour to receive current fee information for the program(s) you are interested in.
-              </p>
-              <p>
-                We are registered with the <strong className="text-warm-gray-800">Region of Durham Child Care Subsidy</strong> program and we encourage eligible families to apply. Our administrative team is happy to assist you through the process.
-              </p>
-            </div>
-          </div>
-        </SectionWrapper>
-      </div>
-
-      {/* FAQ */}
-      <SectionWrapper>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-sage-900 text-3xl font-bold mb-10 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-8">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="border-b border-warm-gray-200 pb-8 last:border-0 last:pb-0">
-                <h3 className="font-heading text-sage-800 text-2xl font-semibold mb-3">{faq.q}</h3>
-                <p className="text-warm-gray-600 text-sm leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
     </>
   );
 }

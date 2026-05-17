@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
@@ -22,8 +23,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <SectionWrapper>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <SectionWrapper className="py-10 md:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Contact info */}
           <div>
             <h2 className="font-heading text-sage-900 text-2xl font-bold mb-8">
@@ -32,8 +33,8 @@ export default function ContactPage() {
 
             <div className="space-y-8">
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
-                  📍
+                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-sage-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Address</h3>
@@ -46,8 +47,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
-                  📞
+                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-sage-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Phone</h3>
@@ -61,8 +62,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
-                  ✉️
+                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-sage-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Email</h3>
@@ -76,14 +77,13 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
-                  🕐
+                <div className="w-10 h-10 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-sage-700" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Office Hours</h3>
                   <p className="text-warm-gray-600 text-sm">
-                    Monday – Friday: 8:00 AM – 5:30 PM<br />
-                    We typically respond to emails within one business day.
+                    Monday – Friday: 8:00 AM – 6:00 PM
                   </p>
                 </div>
               </div>
@@ -195,9 +195,6 @@ export default function ContactPage() {
               >
                 Send Message
               </button>
-              <p className="text-warm-gray-500 text-xs text-center">
-                We typically respond within one business day.
-              </p>
             </form>
           </div>
         </div>

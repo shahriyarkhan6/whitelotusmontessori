@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
+  { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
   { label: "PROGRAMS", href: "/programs" },
   { label: "ADMISSIONS", href: "/admissions" },
