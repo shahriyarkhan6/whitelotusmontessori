@@ -46,9 +46,10 @@ const programs = [
   {
     id: "extended",
     icon: "🌅",
-    title: "Extended Day Program",
-    age: "2.5 – 6 years",
+    title: "Summer Program",
+    age: "18 months – 6 years",
     hours: "Before care from 7:30 AM | After care until 5:30 PM",
+    badge: "Only available July and August",
     description:
       "Life is busy, and we&apos;re here to support your whole family. The Extended Day program wraps around our Casa program to offer flexible before- and after-school care in a calm, enriching environment. Children enjoy free choice, art, outdoor play, and quiet rest.",
     highlights: [
@@ -94,6 +95,11 @@ export default function ProgramsPage() {
                 <h2 className="font-heading text-sage-900 text-3xl font-bold mb-2">
                   {program.title}
                 </h2>
+                {"badge" in program && program.badge && (
+                  <span className="inline-block bg-hint-yellow text-sage-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                    {program.badge}
+                  </span>
+                )}
                 <p className="text-terra-600 font-semibold mb-1">{program.age}</p>
                 <p className="text-warm-gray-500 text-sm mb-6">{program.hours}</p>
                 <p className="text-warm-gray-600 text-base leading-relaxed mb-6">

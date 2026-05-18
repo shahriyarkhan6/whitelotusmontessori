@@ -56,7 +56,7 @@ export default function ContactPage() {
                     href="tel:+16472611323"
                     className="text-warm-gray-600 hover:text-sage-700 text-sm transition-colors"
                   >
-                    647-261-1323
+                    (647) 261-1323
                   </a>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-sage-800 mb-1">Office Hours</h3>
                   <p className="text-warm-gray-600 text-sm">
-                    Monday – Friday: 8:00 AM – 6:00 PM
+                    Monday – Friday: 7:00 AM – 6:00 PM
                   </p>
                 </div>
               </div>

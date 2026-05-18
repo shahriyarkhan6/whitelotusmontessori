@@ -117,9 +117,12 @@ export default function Home() {
 
 
       {/* ── Why Montessori ── */}
-      <SectionWrapper id="why-montessori">
+      <SectionWrapper id="why-montessori" className="-mt-8 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
+            <h2 className="font-heading text-sage-green text-3xl sm:text-4xl font-bold mb-4">
+              Our Philosophy
+            </h2>
             <p className="font-sans text-olive-green text-lg leading-relaxed">
               At White Lotus Montessori, we empower and guide confident, independent, and emotionally intelligent children through personalized Montessori learning experiences designed to inspire curiosity, creativity, and critical thinking. Our child-centered approach encourages children to explore, problem-solve, communicate with confidence, and develop strong social-emotional skills in a calm, supportive environment. We are committed to helping every child grow into a compassionate, capable, and lifelong learner ready to succeed academically, socially, and personally.
             </p>
