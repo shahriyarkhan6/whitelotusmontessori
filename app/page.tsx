@@ -85,7 +85,7 @@ export default function Home() {
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-left-top"
+            className="object-cover object-left-top blur-sm lg:blur-none scale-105 lg:scale-100"
           />
         </div>
         {/* Fade overlay — left-to-right on desktop only */}
@@ -95,7 +95,7 @@ export default function Home() {
             background: "linear-gradient(to right, #f5f2ec 35%, transparent 50%)",
           }}
         />
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-20">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-14 pb-20">
           <div className="max-w-2xl">
             <h1 className="font-heading text-[#2d5a27] lg:text-sage-green font-bold leading-[1.15] mb-6 text-center lg:text-left">
               <span className="block text-[1.35rem] sm:text-2xl font-semibold mb-1">Welcome to</span>
