@@ -76,37 +76,38 @@ const whyPoints = [
 export default function Home() {
   return (
     <>
-      {/* ── Hero — Full Screen ── */}
-      <section className="flex flex-col overflow-hidden lg:relative lg:block lg:min-h-[70vh]">
-        {/* Image — stacked on mobile, absolute on desktop */}
-        <div className="relative h-[60vw] w-full flex-shrink-0 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[70%]">
+      {/* ── Hero ── */}
+      {/* Mobile: stacked (image top, text below). Desktop: side overlay. */}
+      <section className="overflow-hidden lg:relative lg:min-h-[70vh]">
+        {/* Image */}
+        <div className="relative h-[62vw] w-full lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[70%]">
           <Image
             src="/wlm_boy.jpg"
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-left-top blur-sm lg:blur-none scale-105 lg:scale-100"
+            className="object-cover object-top lg:object-left-top"
           />
         </div>
-        {/* Fade overlay — left-to-right on desktop only */}
+
+        {/* Desktop fade overlay — left-to-right */}
         <div
           className="absolute inset-0 z-10 hidden lg:block"
-          style={{
-            background: "linear-gradient(to right, #f5f2ec 35%, transparent 50%)",
-          }}
+          style={{ background: "linear-gradient(to right, #f5f2ec 35%, transparent 50%)" }}
         />
-        {/* Text — below image on mobile, overlay on desktop */}
+
+        {/* Text */}
         <div className="bg-[#f5f2ec] lg:bg-transparent relative z-20 lg:absolute lg:inset-0">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:pt-14 lg:pb-20">
-            <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-              <h1 className="font-heading text-[#1a3a15] lg:text-sage-green font-bold leading-[1.15] mb-6">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 lg:pt-14 lg:pb-20">
+            <div className="max-w-2xl lg:mx-0">
+              <h1 className="font-heading text-[#2d5a27] font-bold leading-[1.15] mb-6 text-left">
                 <span className="block text-[1.35rem] sm:text-2xl font-semibold mb-1">Welcome to</span>
                 <span className="block text-[2.7rem] sm:text-[3.6rem] xl:text-[4.2rem]">White Lotus Montessori</span>
               </h1>
-              <div className="mb-6 flex justify-center lg:justify-start">
+              <div className="mb-6">
                 <LotusDivider />
               </div>
-              <p className="font-sans text-[#1a3a15] lg:text-[#2d5a27] text-lg leading-relaxed max-w-[480px] mx-auto lg:mx-0">
+              <p className="font-sans text-[#2d5a27] text-lg leading-relaxed max-w-[480px]">
                 We empower children through Montessori learning to become confident thinkers, lifelong learners, and compassionate contributors to the world.
               </p>
             </div>
