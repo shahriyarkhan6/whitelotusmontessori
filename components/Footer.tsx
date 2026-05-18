@@ -18,9 +18,6 @@ export default function Footer() {
             <h3 className="font-heading text-cream-100 text-xl font-semibold mb-3">
               White Lotus Montessori
             </h3>
-            <p className="text-sage-300 text-sm leading-relaxed">
-              A licensed Montessori childcare centre nurturing curious, confident, and compassionate children in Whitby, Ontario.
-            </p>
           </div>
 
           {/* Quick links */}
@@ -51,7 +48,7 @@ export default function Footer() {
               <p>300 Dundas St W, Whitby, ON L1N 2M5</p>
               <p>
                 <a href="tel:+16472611323" className="hover:text-cream-100 transition-colors">
-                  647-261-1323
+                  (647) 261-1323
                 </a>
               </p>
               <p>

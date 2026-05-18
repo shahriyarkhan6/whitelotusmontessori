@@ -48,70 +48,7 @@ function LotusDivider() {
   );
 }
 
-function LotusFeatureIcon() {
-  return (
-    <svg
-      width="24"
-      height="22"
-      viewBox="0 0 24 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="text-olive-green"
-      aria-hidden="true"
-    >
-      <path
-        d="M12 18 C11.5 14 10.5 10 10.5 7.5 C10.5 5.5 11.2 4.5 12 4.5 C12.8 4.5 13.5 5.5 13.5 7.5 C13.5 10 12.5 14 12 18 Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 18 C9.5 13.5 6.5 10.5 5.5 8 C4.5 5.5 6 3.5 8.5 4 C10 4.5 11 9.5 12 18 Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 18 C14.5 13.5 17.5 10.5 18.5 8 C19.5 5.5 18 3.5 15.5 4 C14 4.5 13 9.5 12 18 Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M5.5 20 Q12 17 18.5 20"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 /* ── Data ──────────────────────────────────────────────── */
-
-const features = [
-  {
-    icon: <Leaf size={24} strokeWidth={1} className="text-olive-green" />,
-    label: "CHILD-CENTERED",
-    body: "Learning at their own pace",
-  },
-  {
-    icon: <HouseIcon size={24} strokeWidth={1} className="text-olive-green" />,
-    label: "BEAUTIFUL ENVIRONMENT",
-    body: "Calm, natural and inspiring",
-  },
-  {
-    icon: <User size={24} strokeWidth={1} className="text-olive-green" />,
-    label: "EXPERIENCED GUIDES",
-    body: "Nurturing and trained educators",
-  },
-  {
-    icon: <LotusFeatureIcon />,
-    label: "HOLISTIC DEVELOPMENT",
-    body: "Mind, body and spirit",
-  },
-];
-
 
 const whyPoints = [
   {
@@ -148,7 +85,7 @@ export default function Home() {
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-left-top blur-sm scale-105"
+            className="object-cover object-left-top"
           />
         </div>
         {/* Fade overlay — left-to-right on desktop only */}
@@ -177,45 +114,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Feature Strip ── */}
-      <div className="border-t border-powder-pink bg-soft-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4">
-            {features.map((f, i) => (
-              <div
-                key={f.label}
-                className={`flex flex-col gap-2.5 py-8 px-6 ${
-                  i < features.length - 1
-                    ? "border-r border-powder-pink/60"
-                    : ""
-                }`}
-              >
-                <div>{f.icon}</div>
-                <p className="font-sans font-bold text-sage-green text-[0.65rem] uppercase tracking-widest leading-tight">
-                  {f.label}
-                </p>
-                <p className="font-sans text-olive-green/70 text-xs leading-relaxed">
-                  {f.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
 
       {/* ── Why Montessori ── */}
       <SectionWrapper id="why-montessori">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-heading text-sage-green text-3xl sm:text-4xl font-bold mb-4">
-              Why Montessori?
-            </h2>
-            <p className="font-sans text-olive-green text-lg leading-relaxed mb-6">
-              The Montessori method, developed by Dr. Maria Montessori over a century ago, recognizes that children are naturally motivated to learn. When given freedom within a structured, beautiful environment, they flourish — academically, socially, and emotionally.
-            </p>
-            <p className="font-sans text-olive-green/80 text-base leading-relaxed">
-              At White Lotus, we honour each child&apos;s individuality and pace, fostering a lifelong love of learning that goes far beyond the classroom.
+            <p className="font-sans text-olive-green text-lg leading-relaxed">
+              At White Lotus Montessori, we empower and guide confident, independent, and emotionally intelligent children through personalized Montessori learning experiences designed to inspire curiosity, creativity, and critical thinking. Our child-centered approach encourages children to explore, problem-solve, communicate with confidence, and develop strong social-emotional skills in a calm, supportive environment. We are committed to helping every child grow into a compassionate, capable, and lifelong learner ready to succeed academically, socially, and personally.
             </p>
           </div>
           <div className="space-y-6">
@@ -242,18 +148,12 @@ export default function Home() {
       <div className="bg-olive-green">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="font-heading text-soft-white text-3xl sm:text-4xl font-bold mb-4">
-            Ready to Enroll?
+            Take the Next Step
           </h2>
           <p className="font-sans text-soft-white/80 text-lg max-w-xl mx-auto mb-8">
-            Spaces are limited. Take the first step by booking a personal tour or reaching out to our team — we&apos;d love to meet your family.
+            Spaces are limited. Contact our team today to begin your child&apos;s journey with White Lotus Montessori, we look forward to welcoming your family.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/admissions"
-              className="inline-block bg-soft-white text-sage-green hover:bg-hint-yellow font-sans text-sm uppercase tracking-widest px-8 py-3.5 rounded-full transition-colors font-bold"
-            >
-              Start Enrollment
-            </Link>
             <Link
               href="/contact"
               className="inline-block bg-transparent border border-soft-white/60 hover:bg-white/10 text-soft-white font-sans text-sm uppercase tracking-widest px-8 py-3.5 rounded-full transition-colors"
