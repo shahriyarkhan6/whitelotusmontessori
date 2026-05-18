@@ -80,13 +80,13 @@ export default function Home() {
       {/* Mobile: stacked (image top, text below). Desktop: side overlay. */}
       <section className="overflow-hidden lg:relative lg:min-h-[70vh]">
         {/* Image */}
-        <div className="relative h-[62vw] w-full lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[70%]">
+        <div className="relative h-[90vw] w-full lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[70%]">
           <Image
             src="/wlm_boy.jpg"
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-top lg:object-left-top"
+            className="object-cover object-[center_15%] lg:object-left-top"
           />
         </div>
 
