@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 lg:py-1 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <Image src={logo} alt="White Lotus Montessori School" className="h-44 w-auto" priority />
+          <Image src={logo} alt="White Lotus Montessori School" className="h-[18.4rem] w-auto" priority />
         </Link>
 
         {/* Center — desktop nav links */}
