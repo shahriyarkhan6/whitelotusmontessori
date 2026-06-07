@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import logo from "../images/logo.png";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -21,7 +22,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 lg:py-1 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <Image src="/wlm_logo.png" alt="White Lotus Montessori School" width={896} height={336} className="h-44 w-auto" priority />
+          <Image src={logo} alt="White Lotus Montessori School" className="h-44 w-auto" priority />
         </Link>
 
         {/* Center — desktop nav links */}
