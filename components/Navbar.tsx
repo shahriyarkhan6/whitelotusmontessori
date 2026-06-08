@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../images/logo.png";
 
 const navLinks = [
@@ -16,13 +16,20 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header className="bg-[#0d3204] border-b border-white/10 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 lg:py-1 flex items-center justify-between gap-8">
         {/* Left — logo */}
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex-shrink-0">
-          <Image src={logo} alt="White Lotus Montessori School" className="h-[11.75rem] w-auto" priority />
+          <Image src={logo} alt="White Lotus Montessori School" className={`w-auto transition-all duration-300 ${scrolled ? "h-[11.29rem]" : "h-[14.83rem]"}`} priority />
         </Link>
 
         {/* Center — desktop nav links */}
