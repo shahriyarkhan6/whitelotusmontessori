@@ -59,21 +59,17 @@ export default function WaitlistPage() {
     }
     setDropdownError(null);
     setLoading(true);
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: new URLSearchParams({
-        parentName: form.parentName,
-        email: form.email,
-        phone: form.phone,
-        childName: form.childName,
-        childDob: form.childDob,
-        program: form.program,
-        startDate: form.startDate,
-        referral: form.referral,
-        notes: form.notes,
-      }),
-    }).catch(() => {});
+    fetch(SCRIPT_URL + "?" + new URLSearchParams({
+      parentName: form.parentName,
+      email: form.email,
+      phone: form.phone,
+      childName: form.childName,
+      childDob: form.childDob,
+      program: form.program,
+      startDate: form.startDate,
+      referral: form.referral,
+      notes: form.notes,
+    }), { mode: "no-cors" }).catch(() => {});
     setSubmitted(true);
     setLoading(false);
   }
