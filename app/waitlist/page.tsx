@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzNXK9XWXtiUFhkLUezDw7-0Wko4g7rZcsdSGsxAU9sfhYwd1B_R-Y7OZKZlV5qvUM6/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQIaFBnWPYTek8pOUqPgBkZ_JiHALNJX1EOBBLD0VmfJUMcGfcU8hJIaFEIBmkAxVZ/exec";
 
 const inputClass =
   "w-full rounded-lg border border-warm-gray-300 bg-white px-4 py-2.5 text-sm text-warm-gray-900 placeholder:text-warm-gray-400 focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent";
