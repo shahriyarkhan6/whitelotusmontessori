@@ -86,7 +86,7 @@ export default function Home() {
             alt="White Lotus Montessori"
             fill
             priority
-            className="object-cover object-[center_15%] lg:object-left-top"
+            className="object-cover object-[85%_25%] lg:object-left-top"
           />
         </div>
 
