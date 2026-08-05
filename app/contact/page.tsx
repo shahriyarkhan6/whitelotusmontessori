@@ -4,7 +4,6 @@ import { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxa9FLxCyq0QT65RKjfT4pZtJQPucw_HNQ78eieIKZGvCb5v7lG6_omIrNga3VEMs2/exec";
 
 const inputClass = "w-full rounded-lg border border-warm-gray-300 bg-white px-4 py-2.5 text-sm text-warm-gray-900 placeholder:text-warm-gray-400 focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent";
 const labelClass = "block text-sm font-medium text-warm-gray-700 mb-1.5";
@@ -41,14 +40,11 @@ export default function ContactPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    fetch(SCRIPT_URL + "?" + new URLSearchParams({
-      firstName: form.firstName,
-      lastName: form.lastName,
-      email: form.email,
-      phone: form.phone,
-      subject: form.subject,
-      message: form.message,
-    }), { mode: "no-cors" }).catch(() => {});
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
     setSubmitted(true);
     setLoading(false);
   }
