@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Programs | White Lotus Montessori",
@@ -12,53 +13,51 @@ const programs = [
   {
     id: "toddler",
     icon: "🌱",
+    image: "https://images.pexels.com/photos/8923952/pexels-photo-8923952.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "Toddler Program",
     age: "18 months – 2.5 years",
-    hours: "Monday – Friday, 8:30 AM – 12:00 PM",
     description:
-      "The Toddler program is a carefully prepared bridge between home and school. In a small, intimate classroom, toddlers develop a sense of order and belonging while building the foundational skills they need for lifelong independence.",
+      "Our Toddler Program supports the young child's developing independence, language, concentration, coordination, and sense of order. Through rich conversation, storytelling, and purposeful experiences, children expand their vocabulary, strengthen expressive language, and build early communication skills. Within a calm, carefully prepared environment, children are encouraged to explore with purpose, make meaningful choices, and develop the foundational capacities for confident, independent learning.",
     highlights: [
-      "Low 1:4 educator-to-child ratio",
-      "Language-rich morning circle and storytelling",
-      "Practical life activities: pouring, sorting, folding",
-      "Daily outdoor exploration",
-      "Gentle toilet-learning support",
-      "Seamless transition planning into Casa",
+      "Language and vocabulary development through conversation, storytelling, and meaningful interactions",
+      "Cognitive development building concentration, memory, sequencing, and problem-solving",
+      "Practical Life work: pouring, sorting, folding, and caring for the environment",
+      "Daily outdoor exploration supporting movement, sensory development, and nature connection",
+      "Intentional preparation for Casa through independence, coordination, and classroom routines",
     ],
   },
   {
     id: "casa",
     icon: "🏡",
+    image: "https://images.pexels.com/photos/8422262/pexels-photo-8422262.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "Casa Program",
     age: "2.5 – 6 years",
-    hours: "Monday – Friday, 8:30 AM – 3:00 PM",
     description:
-      "Casa — meaning 'home' in Italian — is the heart of the Montessori approach. In a multi-age classroom spanning from preschool to Kindergarten, children work with beautiful, purposeful materials that build concentration, problem-solving, and a genuine love of learning.",
+      "Casa — meaning \"home\" in Italian — is the heart of the Montessori approach. In a thoughtfully prepared environment, children work with purposefully designed Montessori materials that build concentration, problem-solving, and a genuine love of learning. Casa provides a strong foundation for children as they progress toward the elementary years.",
     highlights: [
-      "Five curriculum areas: Practical Life, Sensorial, Language, Mathematics, Cultural Studies",
-      "Self-paced individual and small-group work cycles",
-      "Mixed-age 3–6 classroom (peer mentorship)",
-      "Phonics-based reading and early writing",
+      "Individual and small-group learning experiences that encourage curiosity, exploration, and purposeful learning",
+      "Phonics-based reading, early writing, and cursive writing",
       "Concrete math materials leading to abstract reasoning",
-      "Ministry of Education Kindergarten curriculum alignment",
+      "Hands-on exploration that develops investigation, critical thinking, and meaningful connections",
+      "Science, geography, culture, and the natural world",
     ],
   },
   {
     id: "extended",
     icon: "🌅",
-    title: "Summer Program",
+    image: "https://images.pexels.com/photos/8922799/pexels-photo-8922799.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Summer Camp",
     age: "18 months – 6 years",
-    hours: "Before care from 7:30 AM | After care until 5:30 PM",
     badge: "Only available July and August",
     description:
-      "Life is busy, and we&apos;re here to support your whole family. The Extended Day program wraps around our Casa program to offer flexible before- and after-school care in a calm, enriching environment. Children enjoy free choice, art, outdoor play, and quiet rest.",
+      "Our Summer Camp invites children to spend their summer exploring, creating, building, and discovering through engaging, hands-on experiences. Each week offers opportunities to investigate new ideas, express creativity, connect with nature, and develop confidence through meaningful experiences.",
     highlights: [
-      "Before care from 7:30 AM",
-      "After care until 5:30 PM",
-      "Hot lunch and snack preparation (families provide lunch)",
-      "Afternoon rest/quiet time for younger children",
-      "Arts, crafts, and sensory enrichment activities",
-      "Consistent, familiar educators throughout the day",
+      "Hands-on exploration and discovery",
+      "Creative arts, crafts, and making",
+      "Outdoor play, nature, and movement",
+      "Science, sensory, and inquiry-based activities",
+      "Storytelling, music, and imaginative play",
+      "Opportunities to build independence, collaboration, and confidence",
     ],
   },
 ];
@@ -101,7 +100,7 @@ export default function ProgramsPage() {
                   </span>
                 )}
                 <p className="text-terra-600 font-semibold mb-1">{program.age}</p>
-                <p className="text-warm-gray-500 text-sm mb-6">{program.hours}</p>
+
                 <p className="text-warm-gray-600 text-base leading-relaxed mb-6">
                   {program.description}
                 </p>
@@ -117,17 +116,14 @@ export default function ProgramsPage() {
                 </ul>
               </div>
 
-              {/* Visual placeholder */}
-              <div
-                className={`rounded-2xl flex items-center justify-center aspect-video text-8xl ${
-                  index === 0
-                    ? "bg-sage-100"
-                    : index === 1
-                    ? "bg-terra-50"
-                    : "bg-cream-200"
-                } ${index % 2 === 1 ? "lg:order-1" : ""}`}
-              >
-                {program.icon}
+              {/* Program image */}
+              <div className={`relative rounded-2xl overflow-hidden aspect-video ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <Image
+                  src={program.image}
+                  alt={program.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           ))}
