@@ -110,6 +110,14 @@ export default function Home() {
               <p className="font-sans text-[#2d5a27] text-lg leading-relaxed max-w-[480px]">
                 We empower children through Montessori learning to become confident thinkers, lifelong learners, and compassionate contributors to the world.
               </p>
+              <div className="mt-6">
+                <Link
+                  href="/waitlist"
+                  className="inline-block bg-sage-green hover:bg-sage-700 text-white font-sans text-sm uppercase tracking-widest px-8 py-3.5 rounded-full transition-colors"
+                >
+                  Join Waiting List
+                </Link>
+              </div>
             </div>
           </div>
         </div>
